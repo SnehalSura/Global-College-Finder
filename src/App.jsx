@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { getColleges } from './App';
 
@@ -11,7 +9,8 @@ function App() {
   
   const handleSearch = (e) => {
 
-    let val =  getColleges(country);         // it is an async function, so promise obj returns
+    let val =  getColleges(country);         // it is an async function, so it returns Promise object
+    console.log("Val:", val);
     val.then( (res) => {
       setClgList(res);
       setCountry("");
