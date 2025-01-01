@@ -9,15 +9,15 @@ function App() {
   
   const handleSearch = (e) => {
 
-    let val =  getColleges(country);         // it is an async function, so it returns Promise object
-    console.log("Val:", val);
-    val.then( (res) => {
-      setClgList(res);
+    let all_colleges =  getColleges(country);         // it is an async function, so it returns Promise object, here all_colleges is Promise object
+    // To get the PromiseResult or the value
+    all_colleges.then( (required_clg_list) => {
+      setClgList(required_clg_list);
       setCountry("");
     });
 
   }
-  
+
   return (
     <>
     <input type="text" placeholder='Enter country name: ' value={country} name='country' onChange={(e) => setCountry(e.target.value)} />
@@ -33,3 +33,11 @@ function App() {
 }
 
 export default App
+
+
+
+// Second way using await keyword: 
+  // let all_colleges = await getColleges(country);   
+  // setClgList(all_colleges);
+  // setCountry("");
+  
