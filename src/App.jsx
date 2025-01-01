@@ -20,7 +20,14 @@ function App() {
 
   return (
     <>
-    <input type="text" placeholder='Enter country name: ' value={country} name='country' onChange={(e) => setCountry(e.target.value)} />
+    <h1>Global College Finder</h1>
+    <div>
+      <label htmlFor="country">Country name:</label>
+      <input type="text" placeholder='Enter country name: ' value={country} id="country" name='country' onChange={(e) => setCountry(e.target.value)} />
+
+    </div>
+    
+    
     <button onClick={handleSearch}>Search colleges</button>
     <ol id='result'>
       {
