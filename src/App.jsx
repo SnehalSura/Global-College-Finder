@@ -12,8 +12,10 @@ function App() {
     let all_colleges =  getColleges(country);         // it is an async function, so it returns Promise object, here all_colleges is Promise object
     // To get the PromiseResult or the value
     all_colleges.then( (required_clg_list) => {
+
       setClgList(required_clg_list);
       setCountry("");
+      
     });
 
   }
