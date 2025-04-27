@@ -9,7 +9,7 @@ function App() {
   
   const handleSearch = (e) => {
 
-    let all_colleges =  getColleges(country);         // it is an async function, so it returns Promise object, here all_colleges is Promise object
+    let all_colleges =  getColleges(country);      // it is an async function, so it returns Promise object, here all_colleges is Promise object
     // To get the PromiseResult or the value
     all_colleges.then( (required_clg_list) => {
 

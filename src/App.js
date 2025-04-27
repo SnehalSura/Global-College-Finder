@@ -9,7 +9,7 @@ async function getColleges(value){
         if(value === ""){
             throw("Please enter the country name");
         }
-        let response = await axios.get(url+value);        // returns the promise object
+        let response = await axios.get(url+value);        // returns the promise result
         console.log("Response for the country: ",response);
         let clgArr = response.data;
 
